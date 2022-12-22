@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+UPSTREAM_GIT := https://github.com/harlowja/fasteners.git
+include /usr/share/openstack-pkg-tools/pkgos.make
+
+%:
+	dh $@ --buildsystem=python_distutils --with python3
+
+override_dh_auto_clean:
+	rm -rf build
+
+override_dh_auto_build:
+	echo "Do nothing..."
+
+override_dh_auto_test:
+	echo "Do nothing..."
+
+override_dh_auto_install:
+	pkgos-dh_auto_install --no-py2 --in-tmp
+
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+	set -e ; for pyvers in $(PYTHON3S) ; do \
+		PYTHONPATH=$(CURDIR)/debian/tmp/usr/lib/python3/dist-packages PYTHON=python$$pyvers nosetests3 -v ; \
+	done
+endif

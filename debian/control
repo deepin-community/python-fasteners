@@ -1,0 +1,38 @@
+Source: python-fasteners
+Section: python
+Priority: optional
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Uploaders:
+ Thomas Goirand <zigo@debian.org>,
+Build-Depends:
+ debhelper-compat (= 9),
+ dh-python,
+ openstack-pkg-tools (>= 99~),
+ python3-all,
+ python3-setuptools,
+ python3-sphinx,
+Build-Depends-Indep:
+ python3-monotonic,
+ python3-nose,
+ python3-six,
+ python3-sphinx-rtd-theme,
+ python3-testtools,
+Standards-Version: 4.1.0
+Vcs-Browser: https://salsa.debian.org/openstack-team/python/python-fasteners
+Vcs-Git: https://salsa.debian.org/openstack-team/python/python-fasteners.git
+Homepage: https://github.com/harlowja/fasteners
+
+Package: python3-fasteners
+Architecture: all
+Depends:
+ python3-monotonic,
+ python3-six,
+ ${misc:Depends},
+ ${python3:Depends},
+Description: provides useful locks - Python 3.x
+ Fasteners is a Python package that provides useful locks. It includes locking
+ decorator (that acquires instance objects lock(s), acquires on method entry
+ and releases on method exit), reader-writer locks, inter-process locks and
+ generic lock helpers.
+ .
+ This package contains the Python 3.x module.

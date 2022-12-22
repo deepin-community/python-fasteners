@@ -1,0 +1,64 @@
+python-fasteners (0.14.1-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Run wrap-and-sort -bastk.
+
+  [ Thomas Goirand ]
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 20 Oct 2019 14:56:48 +0200
+
+python-fasteners (0.14.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * d/copyright: fix ordering and years.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 24 Sep 2019 15:42:26 +0200
+
+python-fasteners (0.12.0-5) unstable; urgency=medium
+
+  * Correctly installs the package.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 15 Aug 2019 15:11:05 +0200
+
+python-fasteners (0.12.0-4) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Fixed VCS URLs (https).
+  * d/rules: Changed UPSTREAM_GIT protocol to https
+  * d/control: Use team+openstack@tracker.debian.org as maintainer
+  * Use debhelper-compat instead of debian/compat.
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Daniel Baumann ]
+  * Updating copyright format url.
+  * Running wrap-and-sort -bast.
+  * Removing gbp.conf, not used anymore or should be specified in the
+    developers dotfiles.
+  * Updating standards version to 4.1.0.
+
+  [ Thomas Goirand ]
+  * Removed Python 2 support.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 13 Aug 2019 21:50:04 +0200
+
+python-fasteners (0.12.0-3) unstable; urgency=medium
+
+  * Fixed VCS URLs (https).
+  * d/rules: Changed UPSTREAM_GIT protocol to https
+  * d/s/options: extend-diff-ignore of .gitreview
+  * d/control: Using OpenStack's Gerrit as VCS URLs.
+
+ -- Ondřej Nový <novy@ondrej.org>  Sun, 28 Feb 2016 15:37:26 +0100
+
+python-fasteners (0.12.0-2) unstable; urgency=medium
+
+  * Fixed typo in long description (Closes: #802195).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 23 Oct 2015 12:24:51 +0000
+
+python-fasteners (0.12.0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #792497)
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 15 Jul 2015 14:13:32 +0200
