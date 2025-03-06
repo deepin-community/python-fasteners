@@ -5,16 +5,20 @@ Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Uploaders:
  Thomas Goirand <zigo@debian.org>,
 Build-Depends:
- debhelper-compat (= 9),
+ debhelper-compat (= 11),
  dh-python,
- openstack-pkg-tools (>= 99~),
+ openstack-pkg-tools,
+ pybuild-plugin-pyproject,
  python3-all,
+ python3-poetry-core,
  python3-setuptools,
  python3-sphinx,
 Build-Depends-Indep:
+ python3-diskcache,
+ python3-eventlet,
  python3-monotonic,
- python3-nose,
- python3-six,
+ python3-more-itertools,
+ python3-pytest,
  python3-sphinx-rtd-theme,
  python3-testtools,
 Standards-Version: 4.1.0
@@ -26,7 +30,6 @@ Package: python3-fasteners
 Architecture: all
 Depends:
  python3-monotonic,
- python3-six,
  ${misc:Depends},
  ${python3:Depends},
 Description: provides useful locks - Python 3.x
